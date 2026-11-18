@@ -1,23 +1,66 @@
 {
-  "updated": "2026-11-18T12:00:00+01:00",
+  "updated": "2026-11-18T16:40:12.875Z",
   "hours": [
-    { "day": "Pondělí", "blocks": [
-      { "from": "7:00", "to": "12:00", "note": "" },
-      { "from": "12:30", "to": "15:00", "note": "pouze na objednání" }
-    ] },
-    { "day": "Úterý", "blocks": [
-      { "from": "7:00", "to": "12:00", "note": "" }
-    ] },
-    { "day": "Středa", "blocks": [
-      { "from": "7:00", "to": "13:00", "note": "" }
-    ] },
-    { "day": "Čtvrtek", "blocks": [
-      { "from": "7:00", "to": "12:00", "note": "" },
-      { "from": "12:30", "to": "14:00", "note": "kojenecká poradna, prevence" }
-    ] },
-    { "day": "Pátek", "blocks": [
-      { "from": "7:00", "to": "12:00", "note": "" }
-    ] }
+    {
+      "day": "Pondělí",
+      "blocks": [
+        {
+          "from": "7:00",
+          "to": "12:00",
+          "note": ""
+        },
+        {
+          "from": "12:30",
+          "to": "15:00",
+          "note": "pouze na objednání"
+        }
+      ]
+    },
+    {
+      "day": "Úterý",
+      "blocks": [
+        {
+          "from": "7:00",
+          "to": "12:00",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "day": "Středa",
+      "blocks": [
+        {
+          "from": "7:00",
+          "to": "13:00",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "day": "Čtvrtek",
+      "blocks": [
+        {
+          "from": "7:00",
+          "to": "12:00",
+          "note": ""
+        },
+        {
+          "from": "12:30",
+          "to": "14:00",
+          "note": "kojenecká poradna, prevence"
+        }
+      ]
+    },
+    {
+      "day": "Pátek",
+      "blocks": [
+        {
+          "from": "7:00",
+          "to": "12:00",
+          "note": ""
+        }
+      ]
+    }
   ],
   "hoursNote": "Akutně nemocní prosím nejlépe dopoledne (v případě nutnosti krevního odběru, RTG vyšetření apod.). Poté následují kontroly a objednaní pacienti.",
   "substitute": "MUDr. Alice Rottová, tel. +420 494 515 621",
@@ -29,7 +72,7 @@
       "style": "info",
       "active": true,
       "banner": true,
-      "popup": false,
+      "popup": true,
       "closed": false,
       "from": "",
       "to": ""
