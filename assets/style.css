@@ -1,0 +1,226 @@
+/* MUDr. Julie Tichá – nový web */
+:root {
+  --bg: #f4f8f7;
+  --card: #ffffff;
+  --text: #17302d;
+  --muted: #5b6f6c;
+  --line: #dde8e6;
+  --brand: #0f766e;
+  --brand-dark: #0b5952;
+  --brand-soft: #e2f3f1;
+  --ok: #15803d;
+  --ok-soft: #dcfce7;
+  --closed: #b45309;
+  --closed-soft: #fef3c7;
+  --warn: #b91c1c;
+  --warn-soft: #fef2f2;
+  --info-soft: #eff6ff;
+  --info: #1d4ed8;
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(15, 50, 45, .06), 0 4px 16px rgba(15, 50, 45, .06);
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 120px; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+}
+img { max-width: 100%; height: auto; }
+a { color: var(--brand); text-underline-offset: 2px; }
+a:hover { color: var(--brand-dark); }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .6em; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.25rem; }
+p { margin: 0 0 .8em; }
+.wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.muted { color: var(--muted); }
+.strong { font-weight: 600; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: -9999px; top: 0; background: var(--brand); color: #fff; padding: 8px 12px; z-index: 100; }
+.skip:focus { left: 8px; top: 8px; }
+:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; border-radius: 4px; }
+
+/* ---------- Hlavička ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(255, 255, 255, .96);
+  backdrop-filter: saturate(1.4) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; padding-bottom: 10px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); min-width: 0; }
+.brand-mark {
+  flex: none; display: grid; place-items: center;
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--brand); color: #fff;
+}
+.brand-text { display: flex; flex-direction: column; min-width: 0; }
+.brand-text strong { font-size: 1.05rem; white-space: nowrap; }
+.brand-text small { color: var(--muted); font-size: .8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.site-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0 0 8px; overflow-x: auto; scrollbar-width: none; }
+.site-nav ul::-webkit-scrollbar { display: none; }
+.site-nav a {
+  display: block; padding: 6px 12px; border-radius: 999px;
+  text-decoration: none; color: var(--muted); font-size: .92rem; white-space: nowrap;
+}
+.site-nav a:hover { background: var(--brand-soft); color: var(--brand-dark); }
+
+/* ---------- Tlačítka ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 10px 18px; border-radius: 999px; border: 0;
+  background: var(--brand); color: #fff; font: inherit; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+}
+.btn:hover { background: var(--brand-dark); color: #fff; }
+.btn-ghost { background: var(--brand-soft); color: var(--brand-dark); }
+.btn-ghost:hover { background: #cbeae6; color: var(--brand-dark); }
+.btn-call { flex: none; }
+
+/* ---------- Obsah ---------- */
+main { padding: 20px 0 32px; }
+.card {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 20px; margin-bottom: 16px;
+}
+.top-grid { display: grid; gap: 16px; margin-bottom: 16px; }
+.top-grid .card { margin-bottom: 0; }
+
+/* Upozornění */
+.notices:empty { display: none; }
+.notice {
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 16px;
+  background: var(--info-soft); border-left: 5px solid var(--info);
+}
+.notice h2 { font-size: 1.1rem; margin-bottom: .4em; }
+.notice p { margin-bottom: .4em; }
+.notice p:last-child { margin-bottom: 0; }
+.notice.warning { background: var(--warn-soft); border-left-color: var(--warn); }
+.notice.success { background: var(--ok-soft); border-left-color: var(--ok); }
+.notice.collapsed .notice-body p:nth-child(n+3) { display: none; }
+.notice .more {
+  margin-top: 4px; padding: 4px 0; border: 0; background: none; cursor: pointer;
+  font: inherit; font-weight: 600; font-size: .92rem; color: var(--brand-dark); text-decoration: underline;
+}
+.notice .dates { font-size: .9rem; color: var(--muted); margin-bottom: .4em; }
+
+/* Ordinační hodiny */
+.card-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-bottom: 8px; }
+.card-head h1 { margin: 0; }
+.status {
+  margin: 0; display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 999px; font-weight: 600; font-size: .92rem;
+  background: var(--closed-soft); color: var(--closed);
+}
+.status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
+.status.open { background: var(--ok-soft); color: var(--ok); }
+.status.open::before { animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+.hours { width: 100%; border-collapse: collapse; margin-bottom: 12px; }
+.hours th, .hours td { text-align: left; vertical-align: top; padding: 12px 8px; border-bottom: 1px solid var(--line); }
+.hours tr:last-child th, .hours tr:last-child td { border-bottom: 0; }
+.hours th { font-weight: 600; width: 34%; }
+.hours .block { display: block; }
+.hours .block + .block { margin-top: 6px; }
+.hours .time { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.hours .note { display: block; font-size: .85rem; color: var(--muted); }
+.hours .closed-day { color: var(--muted); }
+.hours tr.today th, .hours tr.today td { background: var(--brand-soft); }
+.hours tr.today th { border-radius: 10px 0 0 10px; }
+.hours tr.today td { border-radius: 0 10px 10px 0; }
+.hours tr.today th::after {
+  content: "dnes"; display: inline-block; margin-left: 8px; padding: 1px 8px;
+  border-radius: 999px; background: var(--brand); color: #fff; font-size: .72rem; font-weight: 600; vertical-align: 2px;
+}
+.loading { color: var(--muted); }
+
+/* Kontakt – rychlý */
+.contact-list { list-style: none; margin: 0 0 16px; padding: 0; }
+.contact-list li { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; }
+.contact-list svg { flex: none; width: 22px; height: 22px; color: var(--brand); margin-top: 2px; }
+.contact-list a { font-weight: 600; text-decoration: none; font-size: 1.05rem; }
+.contact-list small { display: block; color: var(--muted); font-size: .8rem; }
+
+/* Informace */
+.info-grid { display: grid; gap: 20px; }
+.info-grid h2 { font-size: 1.05rem; color: var(--brand-dark); }
+.info-grid p:last-child { margin-bottom: 0; }
+ul.plain { list-style: none; padding: 0; margin: 0; }
+ul.plain li { padding: 3px 0; }
+
+.checklist { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.checklist li { position: relative; padding-left: 30px; }
+.checklist li::before {
+  content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--brand-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230f766e' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/14px no-repeat;
+}
+
+.tags { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li { background: var(--brand-soft); color: var(--brand-dark); padding: 6px 12px; border-radius: 999px; font-size: .92rem; }
+
+.insurers { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.insurers li { display: flex; align-items: center; gap: 14px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; }
+.insurers img { width: 56px; height: 40px; object-fit: contain; flex: none; }
+.insurers b { color: var(--muted); font-weight: 600; font-size: .85rem; margin-left: 4px; }
+
+.contact-full-grid { display: grid; gap: 20px; }
+.map { min-height: 260px; border-radius: 12px; overflow: hidden; background: var(--brand-soft); }
+.map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+.map-load {
+  width: 100%; height: 100%; min-height: 260px; border: 0; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  background: transparent; color: var(--brand-dark); font: inherit; font-weight: 600;
+}
+.map-load small { font-weight: 400; color: var(--muted); }
+.map-load:hover { background: #d4eeea; }
+
+.note-box { background: var(--closed-soft); padding: 12px; border-radius: 10px; }
+
+.site-footer { padding: 24px 0 40px; font-size: .88rem; color: var(--muted); text-align: center; }
+.site-footer p { margin: 0 0 4px; }
+
+/* Popup */
+.popup {
+  border: 0; padding: 0; border-radius: var(--radius); max-width: min(520px, calc(100vw - 32px));
+  width: 100%; box-shadow: 0 20px 60px rgba(0, 0, 0, .25); color: var(--text);
+}
+.popup::backdrop { background: rgba(15, 30, 28, .55); }
+.popup-inner { padding: 24px; border-top: 6px solid var(--warn); }
+.popup.info .popup-inner { border-top-color: var(--info); }
+.popup.success .popup-inner { border-top-color: var(--ok); }
+.popup form { margin-top: 16px; text-align: right; }
+.popup .notice-item + .notice-item { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.popup h3 { font-size: 1.05rem; margin-bottom: .3em; }
+
+/* ---------- Větší obrazovky ---------- */
+@media (min-width: 720px) {
+  body { font-size: 17px; }
+  .card { padding: 24px 28px; }
+  .top-grid { grid-template-columns: 1.6fr 1fr; }
+  .info-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-full-grid { grid-template-columns: 1fr 1.4fr; }
+  .site-nav ul { padding-bottom: 10px; }
+  h1 { font-size: 1.8rem; }
+}
+@media (max-width: 420px) {
+  .btn-call span { display: none; }
+  .btn-call { width: 44px; padding: 0; }
+  .brand-mark { width: 36px; height: 36px; }
+  .hours th { width: 30%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .status.open::before { animation: none; }
+}
+@media print {
+  .site-header, .site-nav, .map, .btn, .popup { display: none !important; }
+  .card { box-shadow: none; border: 1px solid #ccc; }
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Administrace – MUDr. Julie Tichá</title>
+  <link rel="icon" href="../favicon.ico">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="wide">
+  <main class="container">
+    <header class="topbar">
+      <div>
+        <strong>Administrace webu</strong>
+        <span class="small">MUDr. Julie Tichá</span>
+      </div>
+      <div class="topbar-actions" id="topbar-actions" hidden>
+        <a class="btn btn-ghost" href="../" target="_blank" rel="noopener">Zobrazit web ↗</a>
+        <button class="btn btn-ghost" type="button" id="logout">Odhlásit</button>
+      </div>
+    </header>
+    <div id="app"><p>Načítám…</p></div>
+    <noscript><p class="err">Administrace vyžaduje JavaScript.</p></noscript>
+  </main>
+  <script src="config.js"></script>
+  <script src="../assets/app.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

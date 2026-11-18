@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MUDr. Julie Tichá – dětská lékařka, Rychnov nad Kněžnou</title>
+  <meta name="description" content="MUDr. Julie Tichá – praktická lékařka pro děti a dorost, poliklinika Rychnov nad Kněžnou. Ordinační hodiny, kontakt, očkování, smluvní pojišťovny.">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="canonical" href="https://www.mudrjulieticha.cz/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta property="og:title" content="MUDr. Julie Tichá – dětská lékařka">
+  <meta property="og:description" content="Ordinační hodiny a kontakt – pediatrie Rychnov nad Kněžnou.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "MUDr. Julie Tichá – praktická lékařka pro děti a dorost",
+    "medicalSpecialty": "Pediatric",
+    "telephone": "+420494515620",
+    "email": "tichajulie@seznam.cz",
+    "url": "https://www.mudrjulieticha.cz/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jiráskova 1389",
+      "addressLocality": "Rychnov nad Kněžnou",
+      "postalCode": "516 01",
+      "addressCountry": "CZ"
+    }
+  }
+  </script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#hodiny">Přejít na ordinační hodiny</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="MUDr. Julie Tichá – úvod">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg>
+        </span>
+        <span class="brand-text">
+          <strong>MUDr. Julie Tichá</strong>
+          <small>dětská lékařka · Rychnov nad Kněžnou</small>
+        </span>
+      </a>
+      <a class="btn btn-call" href="tel:+420494515620">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+        <span>Zavolat</span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Hlavní menu">
+      <div class="wrap">
+        <ul>
+          <li><a href="#hodiny">Ordinační hodiny</a></li>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#ockovani">Očkování</a></li>
+          <li><a href="#pojistovny">Pojišťovny</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <!-- Upozornění z administrace se vykreslí sem -->
+      <div id="notices" class="notices" aria-live="polite"></div>
+
+      <div class="top-grid">
+        <section id="hodiny" class="card hours-card" aria-labelledby="hodiny-title">
+          <div class="card-head">
+            <h1 id="hodiny-title">Ordinační hodiny</h1>
+            <p id="status" class="status" hidden></p>
+          </div>
+          <noscript>
+            <p class="note-box">Pro zobrazení aktuálních ordinačních hodin povolte JavaScript, nebo zavolejte na <a href="tel:+420494515620">494 515 620</a>.</p>
+          </noscript>
+          <table class="hours" id="hours-table">
+            <caption class="sr-only">Ordinační hodiny podle dnů v týdnu</caption>
+            <tbody id="hours-body">
+              <tr><td class="loading">Načítám…</td></tr>
+            </tbody>
+          </table>
+          <p id="hours-note" class="muted" hidden></p>
+        </section>
+
+        <aside class="card contact-card" aria-labelledby="kontakt-rychly">
+          <h2 id="kontakt-rychly">Kontakt</h2>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+              <div><a href="tel:+420494515620">494 515 620</a><small>ordinace</small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16 1H8a2 2 0 0 0-2 2v18c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm-4 21a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4-4H8V4h8z"/></svg>
+              <div><a href="tel:+420605310337">605 310 337</a><small>mobil</small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+              <div><a href="mailto:tichajulie@seznam.cz">tichajulie@seznam.cz</a><small>e-mail</small></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              <div>Jiráskova 1389<br>516 01 Rychnov nad Kněžnou<small>poliklinika</small></div>
+            </li>
+          </ul>
+          <a class="btn btn-ghost" href="#kontakt">Mapa a pohotovost</a>
+        </aside>
+      </div>
+
+      <section class="card info-grid" aria-label="Důležité informace">
+        <div>
+          <h2>Zástup v nepřítomnosti</h2>
+          <p>Při dovolené, nemoci či školení zastupuje:</p>
+          <p class="strong" id="substitute">MUDr. Alice Rottová, tel. +420 494 515 621</p>
+        </div>
+        <div>
+          <h2>Mimo ordinační hodiny</h2>
+          <p>Pro akutní případy po 16. hodině:</p>
+          <ul class="plain">
+            <li><a href="tel:+420494502342">494 502 342</a> <span class="muted">– všední dny</span></li>
+            <li><a href="tel:+420494502343">494 502 343</a> <span class="muted">– víkendy a svátky (20:00–8:00)</span></li>
+            <li>Při ohrožení života volejte <a href="tel:155"><strong>155</strong></a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Registrujeme nové pacienty</h2>
+          <p>Bez ohledu na bydliště. Pokud k nám přecházíte od jiného lékaře, zdravotní dokumentaci si zajistíme sami. Nabízíme i konzultaci a návštěvu ordinace před porodem.</p>
+        </div>
+      </section>
+
+      <section id="sluzby" class="card" aria-labelledby="sluzby-title">
+        <h2 id="sluzby-title">Poskytované služby</h2>
+        <p>Všechna uvedená vyšetření jsou <strong>hrazena zdravotní pojišťovnou</strong>.</p>
+        <ul class="checklist">
+          <li>Léčebná a preventivní péče pro děti a dorost od 0 do 19 let včetně povinného očkování</li>
+          <li><strong>Návštěva novorozence</strong> doma po příchodu z porodnice</li>
+          <li>Základní <strong>laboratorní vyšetření</strong> s výsledky v den odběru</li>
+          <li>Telefonická či e-mailová konzultace <strong>i mimo ordinační hodiny</strong></li>
+          <li>Vyšetření CRP (akutnost infekce) přístrojem QuikRead go</li>
+          <li>Vyšetření hemoglobinu z kapilární krve</li>
+          <li>Návštěvní služba u nemocných po předchozí domluvě</li>
+          <li>Lékařský piercing ušních boltců (náušnice)</li>
+          <li>Komplexní <strong>nadstandardní očkování</strong>, i do zahraničí</li>
+        </ul>
+      </section>
+
+      <section id="ockovani" class="card" aria-labelledby="ockovani-title">
+        <h2 id="ockovani-title">Nadstandardní očkování</h2>
+        <p>Nabízíme očkování proti:</p>
+        <ul class="tags">
+          <li>chřipce (sezónně)</li>
+          <li>pneumokokovým infekcím</li>
+          <li>meningokokovým onemocněním</li>
+          <li>klíšťové encefalitidě</li>
+          <li>rotavirovým infekcím</li>
+          <li>žloutence A+B (Twinrix)</li>
+          <li>žloutence A (Havrix)</li>
+          <li>HPV – karcinomu děložního čípku</li>
+          <li>planým neštovicím (Varilrix)</li>
+          <li>spalničkám, zarděnkám, příušnicím a neštovicím (Priorix-Tetra)</li>
+        </ul>
+        <p>Dále očkování do zahraničí, např. proti břišnímu tyfu.</p>
+      </section>
+
+      <section id="pojistovny" class="card" aria-labelledby="pojistovny-title">
+        <h2 id="pojistovny-title">Smluvní pojišťovny</h2>
+        <ul class="insurers">
+          <li><img src="assets/img/vzp.png" alt="" width="100" height="78" loading="lazy"><span>Všeobecná zdravotní pojišťovna <b>111</b></span></li>
+          <li><img src="assets/img/vozp.png" alt="" width="100" height="27" loading="lazy"><span>Vojenská zdravotní pojišťovna <b>201</b></span></li>
+          <li><img src="assets/img/czpz.png" alt="" width="100" height="100" loading="lazy"><span>Česká průmyslová zdravotní pojišťovna <b>205</b></span></li>
+          <li><img src="assets/img/ozp.png" alt="" width="100" height="35" loading="lazy"><span>Oborová zdravotní pojišťovna <b>207</b></span></li>
+          <li><img src="assets/img/zps.png" alt="" width="100" height="100" loading="lazy"><span>Zaměstnanecká pojišťovna Škoda <b>209</b></span></li>
+          <li><img src="assets/img/zpmv.png" alt="" width="100" height="100" loading="lazy"><span>Zdravotní pojišťovna ministerstva vnitra <b>211</b></span></li>
+        </ul>
+      </section>
+
+      <section id="kontakt" class="card contact-full" aria-labelledby="kontakt-title">
+        <h2 id="kontakt-title">Kontakt a mapa</h2>
+        <div class="contact-full-grid">
+          <div>
+            <p class="strong">MUDr. Julie Tichá</p>
+            <p>Poliklinika<br>Jiráskova 1389<br>516 01 Rychnov nad Kněžnou</p>
+            <p>
+              Ordinace: <a href="tel:+420494515620">494 515 620</a><br>
+              Mobil: <a href="tel:+420605310337">605 310 337</a><br>
+              E-mail: <a href="mailto:tichajulie@seznam.cz">tichajulie@seznam.cz</a>
+            </p>
+            <p><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Jir%C3%A1skova+1389%2C+Rychnov+nad+Kn%C4%9B%C5%BEnou" target="_blank" rel="noopener">Navigovat</a></p>
+          </div>
+          <div class="map" id="map">
+            <button type="button" class="map-load" id="map-load">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              <span>Zobrazit mapu</span>
+              <small>načte se z Google Maps</small>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© MUDr. Julie Tichá · praktická lékařka pro děti a dorost · Rychnov nad Kněžnou</p>
+      <p class="muted" id="updated"></p>
+    </div>
+  </footer>
+
+  <!-- Vyskakovací upozornění -->
+  <dialog id="popup" class="popup" aria-labelledby="popup-title">
+    <div class="popup-inner">
+      <h2 id="popup-title"></h2>
+      <div id="popup-body"></div>
+      <form method="dialog">
+        <button class="btn" value="ok" autofocus>Rozumím</button>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>
