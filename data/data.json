@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T16:41:11.876Z",
+  "updated": "2026-11-18T19:14:40.171Z",
   "hours": [
     {
       "day": "Pondělí",
@@ -66,12 +66,24 @@
   "substitute": "MUDr. Alice Rottová, tel. +420 494 515 621",
   "notices": [
     {
+      "id": "n-kb4wbyxb",
+      "title": "test",
+      "text": "test",
+      "style": "warning",
+      "active": true,
+      "banner": true,
+      "popup": true,
+      "closed": false,
+      "from": "",
+      "to": ""
+    },
+    {
       "id": "objednavky",
       "title": "Objednávací systém",
       "text": "Vážení rodiče,\ni nadále ponecháváme telefonický objednávací systém, který se velmi osvědčil – nedochází ke zbytečnému setkávání dětí i dospělých v čekárně.\nV případě jakéhokoli onemocnění (nejen horečnatého) nejdříve volejte. Prevence a očkování si objednávejte telefonicky cca do 9:00 a pak odpoledne.\n**Nemocní prosíme 9:00–11:00 hod.**\nNeodkladné situace samozřejmě řešíme hned – volejte. Informace pro rodiče najdete také na www.detskylekar.cz.\nPřeji všem hodně zdraví. Julie Tichá",
       "style": "info",
       "active": true,
-      "banner": false,
+      "banner": true,
       "popup": true,
       "closed": false,
       "from": "",
